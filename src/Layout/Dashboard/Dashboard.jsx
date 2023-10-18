@@ -2,7 +2,7 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
-  const user = "";
+  const user = "admin";
   return (
     <div>
       <div className="drawer lg:drawer-open">
@@ -23,19 +23,24 @@ const Dashboard = () => {
             className="drawer-overlay"
           ></label>
           <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
-            {/* Sidebar content here */}
             <Outlet></Outlet>
             <li className="text-4xl text-center font-bold">Sportify</li>
             <hr className="border-black my-2" />
             {user == "admin" ? (
               <>
                 <li>
-                  <Link className="text-xl hover:bg-secondary text-center font-semibold">
+                  <Link
+                    to="manageUsers"
+                    className="text-xl hover:bg-secondary text-center font-semibold"
+                  >
                     Manage Users
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-xl hover:bg-secondary text-center font-semibold">
+                  <Link
+                    to="/manageCourses"
+                    className="text-xl hover:bg-secondary text-center font-semibold"
+                  >
                     Manage Courses
                   </Link>
                 </li>

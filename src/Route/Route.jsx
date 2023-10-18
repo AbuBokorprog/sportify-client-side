@@ -2,6 +2,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "../Compound/Home/Home";
 import Main from "../Layout/Main/Main";
 import Dashboard from "../Layout/Dashboard/Dashboard";
+import ManageUsers from "../Compound/Admin/ManageUsers/ManageUsers";
+import ManageCourses from "../Compound/Admin/ManageCourses/ManageCourses";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +22,12 @@ const router = createBrowserRouter([
     element: <Dashboard></Dashboard>,
     children: [
       {
-        // path:
+        path: "manageUsers",
+        element: <ManageUsers></ManageUsers>,
+      },
+      {
+        path: "manageCourses",
+        element: <ManageCourses></ManageCourses>,
       },
     ],
   },
