@@ -4,6 +4,7 @@ import Main from "../Layout/Main/Main";
 import Login from "../Compound/Login/Login";
 import Register from "../Compound/Register/Register";
 import PrivateRoutes from "./PrivateRoutes";
+import Dashboard from "../Layout/Dashboard/Dashboard";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,15 @@ const router = createBrowserRouter([
         path: "/test-private-routes",
         element: <PrivateRoutes><h1>Testing Private Routes</h1></PrivateRoutes>
       }
+    ],
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        // path:
+      },
     ],
   },
 ]);

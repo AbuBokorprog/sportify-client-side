@@ -60,7 +60,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-secondary" to="dashboard">
+                <Link className="hover:text-secondary" to="/dashboard">
                   Dashboard
                 </Link>
               </li>

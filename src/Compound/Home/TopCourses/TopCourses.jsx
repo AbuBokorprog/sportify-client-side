@@ -14,8 +14,10 @@ const TopCourses = () => {
   return (
     <div className="my-20">
       <div className="text-center mb-5">
-        <h2 className="text-5xl font-semibold my-3">Explore Our Top Courses</h2>
-        <p className="mx-16 text-sm">
+        <h2 className="text-2xl lg:text-5xl font-semibold my-3">
+          Explore Our Top Courses
+        </h2>
+        <p className="mx-4 lg:mx-16 text-sm">
           Discover a world of opportunity through our premier sports courses.
           Tailored for all levels and ages, our top programs encompass a range
           of sports, from tennis to soccer, designed to unlock your potential.
