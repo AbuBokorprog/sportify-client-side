@@ -4,12 +4,13 @@ import { AuthContext } from '../../providers/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import swal from 'sweetalert';
 import useSetTitle from '../../hooks/useSetTitle';
+import { FaGoogle } from 'react-icons/fa';
 
 const Register = () => {
     const navigate = useNavigate();
     const [error, setError] = useState("");
     const { createUser } = useContext(AuthContext);
-    useSetTitle("Register")
+    useSetTitle("Register");
 
     const handleRegister = event => {
         event.preventDefault();
@@ -20,32 +21,31 @@ const Register = () => {
         const photoURL = form.photoURL.value;
         const password = form.password.value;
         const confirm_password = form.confirm_password.value;
+        const gender = form.gender.value; // Retrieve gender from the form
+
         setError("");
+
         if (password !== confirm_password) {
             setError("Passwords do not match");
             return;
-        }
-        else if (password.length < 6) {
+        } else if (password.length < 6) {
             setError("Password must be at least 6 characters");
             return;
         }
 
-
-        createUser(email, password)
+        createUser(email, password, { displayName: name, photoURL, gender })
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
                 event.target.reset();
-                updateUser(loggedUser, name, photoURL)
+                updateUser(loggedUser, name, photoURL);
                 swal("Thank You!", "You have registered Successfully!", "success");
-                navigate("/login")
+                navigate("/login");
             })
             .catch(err => {
                 console.error(err);
                 setError(err.message);
-            })
-
-
+            });
     };
 
     const updateUser = (user, name, photoURL) => {
@@ -55,12 +55,28 @@ const Register = () => {
         })
             .then(result => {
                 console.log(result);
+            });
+    };
+
+    const loginWithGoogleHandler = () => {
+        const googleProvider = new GoogleAuthProvider(); // Create a new instance
+        loginWithGoogle(googleProvider) // Pass the new instance
+            .then(result => {
+                const loggedInUser = result.user;
+                console.log(loggedInUser);
+                setError("");
+                navigate(from || "/", { replace: true });
             })
-    }
+            .catch(err => {
+                console.log(err);
+                setError(err.message);
+            });
+    };
+
 
 
     return (
-        <div className="flex flex-col justify-center items-center h-screen bg-gray-100">
+        <div className="flex flex-col justify-center items-center min-h-screen bg-gray-100 p-6">
             <div className="w-full max-w-md">
                 <form onSubmit={handleRegister} className="bg-white shadow-lg rounded px-8 pt-6 pb-8 mb-4">
                     <h3 className="text-center text-cyan-700  font-bold mb-1 text-3xl">Welcome to Sportify!</h3>
@@ -91,6 +107,25 @@ const Register = () => {
                             required
                         />
                     </div>
+
+                    <div className="mb-4">
+                    <label className="block text-gray-700 font-bold mb-2" htmlFor="gender">
+                        Gender
+                    </label>
+                    <select
+                        className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="gender"
+                        name="gender"
+                        required
+                    >
+                        <option value="" disabled>Select your gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+
                     <div className="mb-4">
                         <label className="block text-gray-700 font-bold mb-2" htmlFor="photoURL">
                             PhotoURL
@@ -148,6 +183,18 @@ const Register = () => {
                         error && <p className="text-red-600 mt-3 text-center">{error}</p>
                     }
                 </form>
+
+                <div className="flex items-center my-6">
+                    <hr className="border-t border-gray-300 flex-grow mr-3" />
+                    <h2 className="text-gray-800 text-lg font-bold">Or</h2>
+                    <hr className="border-t border-gray-300 flex-grow ml-3" />
+                </div>
+
+                <div className="flex justify-center mb-4">
+                    <button onClick={loginWithGoogleHandler} className="hover:bg-info bg-cyan-700 text-white hover:text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2 flex justify-center items-center">
+                        <FaGoogle className='me-2' /> Login with Google
+                    </button>
+                </div>
 
             </div>
         </div>

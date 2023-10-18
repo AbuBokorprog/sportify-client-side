@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
-// import { GoogleAuthProvider } from "firebase/auth";
 import useSetTitle from '../../hooks/useSetTitle';
 import { FaGoogle } from 'react-icons/fa';
 import { GoogleAuthProvider } from 'firebase/auth';
@@ -91,7 +90,7 @@ function Login() {
                             value="Login"
                         />
                         <p className="ms-2">
-                            Are you new to PixiePlay? <Link to="/register"
+                            Are you new to Sportify? <Link to="/register"
                                 className="inline-block align-baseline font-bold text-sm text-cyan-700 hover:text-info"
 
                             >
