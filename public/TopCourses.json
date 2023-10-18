@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "course_name": "Tennis Mastery",
+    "image": "https://example.com/tennis_image.jpg",
+    "instructor_name": "John Smith",
+    "price": "$99.99"
+  },
+  {
+    "id": 2,
+    "course_name": "Basketball Fundamentals",
+    "image": "https://example.com/basketball_image.jpg",
+    "instructor_name": "Sarah Johnson",
+    "price": "$79.99"
+  },
+  {
+    "id": 3,
+    "course_name": "Soccer Skills Workshop",
+    "image": "https://example.com/soccer_image.jpg",
+    "instructor_name": "David Brown",
+    "price": "$89.99"
+  },
+  {
+    "id": 4,
+    "course_name": "Swimming Techniques",
+    "image": "https://example.com/swimming_image.jpg",
+    "instructor_name": "Emily Wilson",
+    "price": "$69.99"
+  },
+  {
+    "id": 5,
+    "course_name": "Golf Excellence",
+    "image": "https://example.com/golf_image.jpg",
+    "instructor_name": "Michael Clark",
+    "price": "$109.99"
+  },
+  {
+    "id": 6,
+    "course_name": "Fitness Bootcamp",
+    "image": "https://example.com/fitness_image.jpg",
+    "instructor_name": "Lisa Anderson",
+    "price": "$49.99"
+  }
+]

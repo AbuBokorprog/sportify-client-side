@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "image": "https://example.com/instructor1.jpg",
+    "name": "John Smith"
+  },
+  {
+    "id": 2,
+    "image": "https://example.com/instructor2.jpg",
+    "name": "Sarah Johnson"
+  },
+  {
+    "id": 3,
+    "image": "https://example.com/instructor3.jpg",
+    "name": "David Brown"
+  },
+  {
+    "id": 4,
+    "image": "https://example.com/instructor4.jpg",
+    "name": "Emily Wilson"
+  },
+  {
+    "id": 5,
+    "image": "https://example.com/instructor5.jpg",
+    "name": "Michael Clark"
+  },
+  {
+    "id": 6,
+    "image": "https://example.com/instructor6.jpg",
+    "name": "Lisa Anderson"
+  }
+]
