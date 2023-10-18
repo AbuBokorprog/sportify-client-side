@@ -30,216 +30,96 @@ const Banner = () => {
             src="/black-banner.png"
             alt=""
           />
-          <div className="absolute top-4 lg:top-40 left-0 mx-auto text-center text-white">
-            <p className="text-5xl font-bold mb-4">
+          <div className="absolute top-8 lg:top-40 lg:left-72 mx-auto text-center text-white">
+            <p className="lg:text-5xl lg:font-bold lg:mb-4">
               Welcome to best sports Academy
             </p>
             {/* <hr className="mx-44" /> */}
-            <h2 className="text-4xl font-semibold my-2">
+            <h2 className="lg:text-4xl lg:font-semibold lg:my-2">
               Unlock Your Full Potential!
             </h2>
-            <p className="py-2 text-center mx-40">
-              Join our academy for elite training, expert coaching, and a
-              winning community. Elevate your game and fulfill your athletic
-              dreams with us.
+            <p className="lg:py-2 text-center mx-14 lg:mx-0">
+              Discover Excellence at Our Sports Academy - Join Today!
             </p>
             <div>
-              <button className="btn btn-error font-medium bg-secondary lg:px-10 border-0">
+              <button className="btn font-medium bg-secondary lg:px-10 border-0">
                 View More
               </button>
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="slide1">
+        <SwiperSlide className="slide2">
           <img
             className="bg-cover w-screen relative max-h-screen bg-center"
-            src="/black-banner.png"
+            src="/banner3.png"
             alt=""
           />
-          <div className="absolute top-4 lg:top-40 left-0 mx-auto text-center text-white">
-            <p className="text-5xl font-bold mb-4">
+          <div className="absolute top-8 lg:top-40 lg:left-72 mx-auto text-center text-white">
+            <p className="lg:text-5xl lg:font-bold lg:mb-4">
               Welcome to best sports Academy
             </p>
             {/* <hr className="mx-44" /> */}
-            <h2 className="text-4xl font-semibold my-2">
-              Unlock Your Full Potential!
+            <h2 className="lg:text-4xl lg:font-semibold lg:my-2">
+              Elevate Your Game to New Heights
             </h2>
-            <p className="py-2 text-center mx-40">
-              Join our academy for elite training, expert coaching, and a
-              winning community. Elevate your game and fulfill your athletic
-              dreams with us.
+            <p className="lg:py-2 text-center mx-14 lg:mx-0">
+              The Ultimate Sports Training Experience Awaits You.
             </p>
             <div>
-              <button className="btn btn-error font-medium bg-secondary lg:px-10 border-0">
+              <button className="btn font-medium bg-secondary lg:px-10 border-0">
                 View More
               </button>
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="slide1">
+        <SwiperSlide className="slide3">
           <img
             className="bg-cover w-screen relative max-h-screen bg-center"
-            src="/black-banner.png"
+            src="/banner2.png"
             alt=""
           />
-          <div className="absolute top-4 lg:top-40 left-0 mx-auto text-center text-white">
-            <p className="text-5xl font-bold mb-4">
+          <div className="absolute top-8 lg:top-40 left-10 lg:left-28 mx-auto text-left text-white">
+            <p className="lg:text-5xl lg:font-bold lg:mb-4">
               Welcome to best sports Academy
             </p>
             {/* <hr className="mx-44" /> */}
-            <h2 className="text-4xl font-semibold my-2">
-              Unlock Your Full Potential!
+            <h2 className="lg:text-4xl lg:font-semibold lg:my-2">
+              Transform into a Sports Superstar
             </h2>
-            <p className="py-2 text-center mx-40">
-              Join our academy for elite training, expert coaching, and a
-              winning community. Elevate your game and fulfill your athletic
-              dreams with us.
+            <p className="lg:py-2 text-left">
+              Elevate your game and fulfill your athletic dreams with us.
             </p>
             <div>
-              <button className="btn btn-error font-medium bg-secondary lg:px-10 border-0">
+              <button className="btn font-medium bg-secondary lg:px-10 border-0">
                 View More
               </button>
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="slide1">
+        <SwiperSlide className="slide4">
           <img
             className="bg-cover w-screen relative max-h-screen bg-center"
-            src="/black-banner.png"
+            src="/banner1.png"
             alt=""
           />
-          <div className="absolute top-4 lg:top-40 left-0 mx-auto text-center text-white">
-            <p className="text-5xl font-bold mb-4">
+          <div className="absolute top-8 lg:top-40 left-10 lg:left-20 text-left text-white">
+            <p className="lg:text-5xl lg:font-bold lg:mb-4">
               Welcome to best sports Academy
             </p>
             {/* <hr className="mx-44" /> */}
-            <h2 className="text-4xl font-semibold my-2">
-              Unlock Your Full Potential!
+            <h2 className="lg:text-4xl lg:font-semibold lg:my-2">
+              Play, Train, and Win!
             </h2>
-            <p className="py-2 text-center mx-40">
-              Join our academy for elite training, expert coaching, and a
-              winning community. Elevate your game and fulfill your athletic
-              dreams with us.
+            <p className="lg:py-2 text-left">
+              Your Path to Success in Sports Starts Here.
             </p>
             <div>
-              <button className="btn btn-error font-medium bg-secondary lg:px-10 border-0">
+              <button className="btn font-medium bg-secondary lg:px-10 border-0">
                 View More
               </button>
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="slide1">
-          <img
-            className="bg-cover w-screen relative max-h-screen bg-center"
-            src="/black-banner.png"
-            alt=""
-          />
-          <div className="absolute top-4 lg:top-40 left-0 mx-auto text-center text-white">
-            <p className="text-5xl font-bold mb-4">
-              Welcome to best sports Academy
-            </p>
-            {/* <hr className="mx-44" /> */}
-            <h2 className="text-4xl font-semibold my-2">
-              Unlock Your Full Potential!
-            </h2>
-            <p className="py-2 text-center mx-40">
-              Join our academy for elite training, expert coaching, and a
-              winning community. Elevate your game and fulfill your athletic
-              dreams with us.
-            </p>
-            <div>
-              <button className="btn btn-error font-medium bg-secondary lg:px-10 border-0">
-                View More
-              </button>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="slide1">
-          <img
-            className="bg-cover w-screen relative max-h-screen bg-center"
-            src="/black-banner.png"
-            alt=""
-          />
-          <div className="absolute top-4 lg:top-40 left-0 mx-auto text-center text-white">
-            <p className="text-5xl font-bold mb-4">
-              Welcome to best sports Academy
-            </p>
-            {/* <hr className="mx-44" /> */}
-            <h2 className="text-4xl font-semibold my-2">
-              Unlock Your Full Potential!
-            </h2>
-            <p className="py-2 text-center mx-40">
-              Join our academy for elite training, expert coaching, and a
-              winning community. Elevate your game and fulfill your athletic
-              dreams with us.
-            </p>
-            <div>
-              <button className="btn btn-error font-medium bg-secondary lg:px-10 border-0">
-                View More
-              </button>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="slide1">
-          <img
-            className="bg-cover w-screen relative max-h-screen bg-center"
-            src="/black-banner.png"
-            alt=""
-          />
-          <div className="absolute top-4 lg:top-40 left-0 mx-auto text-center text-white">
-            <p className="text-5xl font-bold mb-4">
-              Welcome to best sports Academy
-            </p>
-            {/* <hr className="mx-44" /> */}
-            <h2 className="text-4xl font-semibold my-2">
-              Unlock Your Full Potential!
-            </h2>
-            <p className="py-2 text-center mx-40">
-              Join our academy for elite training, expert coaching, and a
-              winning community. Elevate your game and fulfill your athletic
-              dreams with us.
-            </p>
-            <div>
-              <button className="btn btn-error font-medium bg-secondary lg:px-10 border-0">
-                View More
-              </button>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="slide1">
-          <img
-            className="bg-cover w-screen relative max-h-screen bg-center"
-            src="/black-banner.png"
-            alt=""
-          />
-          <div className="absolute top-4 lg:top-40 left-0 mx-auto text-center text-white">
-            <p className="text-5xl font-bold mb-4">
-              Welcome to best sports Academy
-            </p>
-            {/* <hr className="mx-44" /> */}
-            <h2 className="text-4xl font-semibold my-2">
-              Unlock Your Full Potential!
-            </h2>
-            <p className="py-2 text-center mx-40">
-              Join our academy for elite training, expert coaching, and a
-              winning community. Elevate your game and fulfill your athletic
-              dreams with us.
-            </p>
-            <div>
-              <button className="btn btn-error font-medium bg-secondary lg:px-10 border-0">
-                View More
-              </button>
-            </div>
-          </div>
-        </SwiperSlide>
-        {/* <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide> */}
       </Swiper>
     </div>
   );
