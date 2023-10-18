@@ -10,12 +10,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
+    "@heroicons/react": "^2.0.18",
+=======
+>>>>>>> f51f502be1a371d517ad2cdacc676159c3991a90
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.17.0",
+<<<<<<< HEAD
+    "sort-by": "^1.2.0",
+    "swiper": "^10.3.1"
+=======
     "sort-by": "^1.2.0"
+>>>>>>> f51f502be1a371d517ad2cdacc676159c3991a90
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
@@ -29,6 +38,7 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.3",
+    "tailwindcss-theme-swapper": "^0.7.3",
     "vite": "^4.4.5"
   }
 }
