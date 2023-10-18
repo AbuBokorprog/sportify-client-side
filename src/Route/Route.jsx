@@ -3,6 +3,7 @@ import Home from "../Compound/Home/Home";
 import Main from "../Layout/Main/Main";
 import Login from "../Compound/Login/Login";
 import Register from "../Compound/Register/Register";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>
+      },
+      {
+        path: "/test-private-routes",
+        element: <PrivateRoutes><h1>Testing Private Routes</h1></PrivateRoutes>
       }
     ],
   },
