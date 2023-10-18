@@ -9,7 +9,7 @@ export default {
 
           secondary: "#06b6d4", //Cyan
 
-          info: "#67e8f9", //white-Cyan
+          info: "#06b6d4", //
 
           neutral: "#21323b",
 

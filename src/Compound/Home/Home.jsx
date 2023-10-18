@@ -5,6 +5,7 @@ import TopInstructor from "./TopInstructor/TopInstructor";
 import Gallery from "./Gallery";
 import Partner from "./Partner";
 import Facilities from "./Facilities";
+import CustomerReviews from "./Reviews/CustomerReviews";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <TopInstructor></TopInstructor>
       <Gallery></Gallery>
       <Facilities></Facilities>
+      <CustomerReviews></CustomerReviews>
     </div>
   );
 };

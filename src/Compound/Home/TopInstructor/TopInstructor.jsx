@@ -14,10 +14,10 @@ const TopInstructor = () => {
   return (
     <div className="my-20">
       <div className="text-center mb-5">
-        <h2 className="text-5xl font-semibold my-3">
+        <h2 className="text-2xl lg:text-5xl font-semibold my-3">
           Meet Our Top Instructors
         </h2>
-        <p className="mx-16 text-sm">
+        <p className="mx-4 lg:mx-16 text-sm">
           Explore a team of accomplished professionals who are dedicated to
           shaping your athletic journey. Our top instructors bring a wealth of
           experience and expertise, ensuring you receive the finest training in
