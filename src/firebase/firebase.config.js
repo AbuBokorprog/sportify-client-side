@@ -1,3 +1,4 @@
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -5,14 +6,13 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_apiKey,
-  authDomain: import.meta.env.VITE_authDomain,
-  projectId: import.meta.env.VITE_projectId,
-  storageBucket: import.meta.env.VITE_storageBucket,
-  messagingSenderId: import.meta.env.VITE_messagingSenderId,
-  appId: import.meta.env.VITE_appId
+  apiKey: "AIzaSyB9FFkabmXZnzSIwYda6DSjwTOU2WQvdp4",
+  authDomain: "sportify-3-3391c.firebaseapp.com",
+  projectId: "sportify-3-3391c",
+  storageBucket: "sportify-3-3391c.appspot.com",
+  messagingSenderId: "58957618894",
+  appId: "1:58957618894:web:39323f66469e1c8f023a9f"
 };
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
-

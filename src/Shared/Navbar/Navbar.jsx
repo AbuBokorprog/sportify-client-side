@@ -1,8 +1,24 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { UserCircleIcon } from "@heroicons/react/24/solid";
+import { AuthContext } from "../../providers/AuthProvider";
+import { FaArrowAltCircleRight, FaSignOutAlt } from "react-icons/fa";
 const Navbar = () => {
-  const user = {};
+  const { user, logout } = useContext(AuthContext);
+    const location = useLocation();
+
+    // console.log(user);
+
+    const handleLogout = () => {
+        logout()
+            .then((result) => {
+                console.log("Logged out successfully");
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    }
+
   return (
     <div className="container mx-auto px-10">
       <div className="navbar bg-base-100">
@@ -90,10 +106,36 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end font-medium">
-          <UserCircleIcon className="w-12 me-2"></UserCircleIcon>
+          {/* <UserCircleIcon className="w-12 me-2"></UserCircleIcon>
           <Link to="/login" className="text-secondary text-lg font-medium">
             Login
-          </Link>
+          </Link> */}
+
+{
+                        user ? <label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom me-2" data-tip={user?.displayName} >
+                            <div className="w-12 rounded-full">
+
+                                <img src={user?.photoURL} alt="" />
+
+                            </div>
+                        </label> :
+                            <span></span>
+                    }
+                    {
+                        user ? <button onClick={handleLogout} className="btn btn-ghost btn-md hover:bg-info bg-cyan-700 text-white hover:text-white font-bold"> <FaSignOutAlt className="me-1"></FaSignOutAlt> Logout</button> : 
+                        <>
+                        {/* <UserCircleIcon className="w-12 me-2"></UserCircleIcon> */}
+
+                        <span className="btn btn-ghost btn-md hover:bg-info bg-cyan-700 text-white hover:text-white font-bold">
+                        <FaArrowAltCircleRight className="me-1"></FaArrowAltCircleRight>
+                        <Link to="/login" className="text-white  text-lg font-medium">
+                        Login
+                      </Link>
+                        </span>
+                        </>
+                        
+                    }
+
         </div>
       </div>
     </div>
