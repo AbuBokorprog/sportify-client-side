@@ -12,6 +12,7 @@ import Coursespages from "../Compound/Courses/Coursespage";
 import AddCourse from "../Compound/Instructor/AddCourse/AddCourse";
 import MyCourse from "../Compound/Instructor/MyCourse/MyCourse";
 import UpdateCourse from "../Compound/Instructor/UpdateCourse/UpdateCourse";
+import About from "../Compound/About/About";
 
 const router = createBrowserRouter([
   {
@@ -35,7 +36,10 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register></Register>,
       },
-      {},
+      {
+        path: "/aboutUs",
+        element: <About></About>,
+      },
     ],
   },
   {
