@@ -1,42 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 
 const ManageUsers = () => {
+  const [allUsers, setAllUsers] = useState([]);
+
   return (
-    <div>
+    <div className="my-auto mx-auto">
       <div className="overflow-x-auto">
+        <div>
+          <h2 className="text-2xl lg:text-5xl font-semibold mb-3">
+            All Users:
+          </h2>
+        </div>
         <table className="table">
           {/* head */}
           <thead>
             <tr>
-              <th></th>
+              <th>No</th>
+              <th>Image</th>
               <th>Name</th>
-              <th>Job</th>
-              <th>Favorite Color</th>
+              <th>Email</th>
+              <th>Action</th>
             </tr>
           </thead>
-          <tbody>
-            {/* row 1 */}
-            <tr>
-              <th>1</th>
-              <td>Cy Ganderton</td>
-              <td>Quality Control Specialist</td>
-              <td>Blue</td>
-            </tr>
-            {/* row 2 */}
-            <tr>
-              <th>2</th>
-              <td>Hart Hagerty</td>
-              <td>Desktop Support Technician</td>
-              <td>Purple</td>
-            </tr>
-            {/* row 3 */}
-            <tr>
-              <th>3</th>
-              <td>Brice Swyre</td>
-              <td>Tax Accountant</td>
-              <td>Red</td>
-            </tr>
-          </tbody>
+          <tbody>{/* row 1 */}</tbody>
         </table>
       </div>
     </div>
