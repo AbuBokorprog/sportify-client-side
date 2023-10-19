@@ -1,4 +1,4 @@
-import React, {createContext, useEffect, useState} from "react";
+import React, { createContext, useEffect, useState } from "react";
 import {
   createUserWithEmailAndPassword,
   getAuth,
@@ -7,13 +7,13 @@ import {
   signInWithPopup,
   signOut,
 } from "firebase/auth";
-import {app} from "../firebase/firebase.config";
+import { app } from "../firebase/firebase.config";
 import axios from "axios";
 
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
 
-const AuthProvider = ({children}) => {
+const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -44,8 +44,8 @@ const AuthProvider = ({children}) => {
       if (!currentUser || !token) return;
       axios
         .get(`/user/${currentUser?.email}`)
-        .then(({data}) => {
-          const fendedUser = {...currentUser, ...data};
+        .then(({ data }) => {
+          const fendedUser = { ...currentUser, ...data };
           setUser(fendedUser);
           setLoading(false);
         })
