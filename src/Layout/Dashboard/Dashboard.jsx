@@ -2,7 +2,11 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
+
+  
+
   const user = "admin";
+
   return (
     <div>
       <div className="drawer lg:drawer-open">
@@ -71,12 +75,18 @@ const Dashboard = () => {
               <>
                 <li className="text-xl  text-center font-semibold">Student</li>
                 <li>
-                  <Link className="text-xl hover:bg-secondary text-center font-semibold">
+                  <Link
+                    to="mySelectedCourses"
+                    className="text-xl hover:bg-secondary text-center font-semibold"
+                  >
                     My Selected Courses
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-xl hover:bg-secondary text-center font-semibold">
+                  <Link
+                    to="myEnrolledCourse"
+                    className="text-xl hover:bg-secondary text-center font-semibold"
+                  >
                     My Enrolled Courses
                   </Link>
                 </li>
