@@ -1,16 +1,16 @@
-import React, {useContext, useState} from "react";
-import {Link, useNavigate} from "react-router-dom";
-import {AuthContext} from "../../providers/AuthProvider";
-import {updateProfile} from "firebase/auth";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
+import { updateProfile } from "firebase/auth";
 import swal from "sweetalert";
 import useSetTitle from "../../hooks/useSetTitle";
-import {FaGoogle} from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
 import axios from "axios";
 
 const Register = () => {
   const navigate = useNavigate();
   const [error, setError] = useState("");
-  const {createUser, logout} = useContext(AuthContext);
+  const { createUser, logout } = useContext(AuthContext);
   useSetTitle("Register");
 
   const handleRegister = (event) => {
@@ -34,7 +34,7 @@ const Register = () => {
       return;
     }
 
-    createUser(email, password, {displayName: name, photoURL})
+    createUser(email, password, { displayName: name, photoURL })
       .then((result) => {
         const loggedUser = result.user;
         event.target.reset();
@@ -48,7 +48,7 @@ const Register = () => {
             photoURL,
             gender,
           })
-          .then(({data}) => {
+          .then(({ data }) => {
             swal(data.message);
             logout()
               .then(() => navigate("/login"))
@@ -91,7 +91,7 @@ const Register = () => {
         const loggedInUser = result.user;
         console.log(loggedInUser);
         setError("");
-        navigate(from || "/", {replace: true});
+        navigate(from || "/", { replace: true });
       })
       .catch((err) => {
         console.log(err);
@@ -104,7 +104,8 @@ const Register = () => {
       <div className="w-full max-w-md">
         <form
           onSubmit={handleRegister}
-          className="bg-white shadow-lg rounded px-8 pt-6 pb-8 mb-4">
+          className="bg-white shadow-lg rounded px-8 pt-6 pb-8 mb-4"
+        >
           <h3 className="text-center text-cyan-700  font-bold mb-1 text-3xl">
             Welcome to Sportify!
           </h3>
@@ -114,7 +115,8 @@ const Register = () => {
           <div className="mb-4">
             <label
               className="block text-gray-700 font-bold mb-2"
-              htmlFor="name">
+              htmlFor="name"
+            >
               Name
             </label>
             <input
@@ -129,7 +131,8 @@ const Register = () => {
           <div className="mb-4">
             <label
               className="block text-gray-700 font-bold mb-2"
-              htmlFor="email">
+              htmlFor="email"
+            >
               Email
             </label>
             <input
@@ -145,14 +148,16 @@ const Register = () => {
           <div className="mb-4">
             <label
               className="block text-gray-700 font-bold mb-2"
-              htmlFor="gender">
+              htmlFor="gender"
+            >
               Gender
             </label>
             <select
               className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="gender"
               name="gender"
-              required>
+              required
+            >
               <option value="">Select your gender</option>
               <option value="male">Male</option>
               <option value="female">Female</option>
@@ -163,7 +168,8 @@ const Register = () => {
           <div className="mb-4">
             <label
               className="block text-gray-700 font-bold mb-2"
-              htmlFor="photoURL">
+              htmlFor="photoURL"
+            >
               PhotoURL
             </label>
             <input
@@ -178,7 +184,8 @@ const Register = () => {
           <div className="mb-6">
             <label
               className="block text-gray-700 font-bold mb-2"
-              htmlFor="password">
+              htmlFor="password"
+            >
               Password
             </label>
             <input
@@ -193,7 +200,8 @@ const Register = () => {
           <div className="mb-6">
             <label
               className="block text-gray-700 font-bold mb-2"
-              htmlFor="password">
+              htmlFor="password"
+            >
               Confirm Password
             </label>
             <input
@@ -207,7 +215,7 @@ const Register = () => {
 
           <div className="flex items-center justify-between">
             <input
-              className=" hover:bg-info bg-cyan-700 text-white hover:text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="cursor-pointer hover:bg-info bg-cyan-700 text-white hover:text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
               value="Register"
             />
@@ -216,7 +224,8 @@ const Register = () => {
               Already Registered?{" "}
               <Link
                 to="/login"
-                className="inline-block align-baseline font-bold text-sm text-cyan-700 hover:text-info">
+                className="inline-block align-baseline font-bold text-sm text-cyan-700 hover:text-info"
+              >
                 Login
               </Link>
             </p>
@@ -230,10 +239,12 @@ const Register = () => {
           <hr className="border-t border-gray-300 flex-grow ml-3" />
         </div>
 
-        <div className="flex justify-center mb-4">
+        <div className="flex justify-center  mb-4">
           <button
+            disabled
             onClick={loginWithGoogleHandler}
-            className="hover:bg-info bg-cyan-700 text-white hover:text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2 flex justify-center items-center">
+            className="hover:bg-info bg-cyan-700 text-white hover:text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2 flex justify-center items-center"
+          >
             <FaGoogle className="me-2" /> Login with Google
           </button>
         </div>

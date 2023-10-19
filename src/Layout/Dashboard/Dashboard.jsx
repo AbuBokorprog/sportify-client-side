@@ -2,7 +2,11 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
-  const user = "student";
+
+  
+
+  const user = "admin";
+
   return (
     <div>
       <div className="drawer lg:drawer-open">
