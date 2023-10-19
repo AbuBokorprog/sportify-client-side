@@ -11,6 +11,7 @@ import ErrorPage from "../Compound/Errorpage/Errorpage";
 import Coursespages from "../Compound/Courses/Coursespage";
 import AddCourse from "../Compound/Instructor/AddCourse/AddCourse";
 import MyCourse from "../Compound/Instructor/MyCourse/MyCourse";
+import UpdateCourse from "../Compound/Instructor/UpdateCourse/UpdateCourse";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
       {
         path: "MyCourse",
         element: <MyCourse></MyCourse>,
+      },
+      {
+        path: "updateCourse",
+        element: <UpdateCourse></UpdateCourse>,
       },
     ],
   },

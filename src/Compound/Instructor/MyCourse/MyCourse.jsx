@@ -2,10 +2,10 @@ import React from "react";
 
 const MyCourse = () => {
   return (
-    <div className="my-auto mx-auto">
+    <div className="w-full h-full mx-auto">
       <div className="overflow-x-auto">
         <div>
-          <h2 className="text-2xl lg:text-5xl font-semibold mb-3">
+          <h2 className="text-2xl lg:text-5xl text-center font-semibold mb-3">
             My Courses:
           </h2>
         </div>
