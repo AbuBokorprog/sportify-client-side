@@ -14,8 +14,6 @@ token = token && `Bearer ${token}`;
 
 axios.defaults.headers.common["Authorization"] = token;
 
-// Globally used baseURL with JWT
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
