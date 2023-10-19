@@ -2,7 +2,7 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
-  const user = "admin";
+  const user = "instructor";
   return (
     <div>
       <div className="drawer lg:drawer-open">
@@ -27,6 +27,7 @@ const Dashboard = () => {
             <hr className="border-black my-2" />
             {user == "admin" ? (
               <>
+                <li className="text-xl  text-center font-semibold">ADMIN</li>
                 <li>
                   <Link
                     to="manageUsers"
@@ -46,19 +47,29 @@ const Dashboard = () => {
               </>
             ) : user == "instructor" ? (
               <>
+                <li className="text-xl  text-center font-semibold">
+                  Instructor
+                </li>
                 <li>
-                  <Link className="text-xl hover:bg-secondary text-center font-semibold">
+                  <Link
+                    to="AddCourse"
+                    className="text-xl hover:bg-secondary text-center font-semibold"
+                  >
                     Add Courses
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-xl hover:bg-secondary text-center font-semibold">
+                  <Link
+                    to="MyCourse"
+                    className="text-xl hover:bg-secondary text-center font-semibold"
+                  >
                     My Courses
                   </Link>
                 </li>
               </>
             ) : (
               <>
+                <li className="text-xl  text-center font-semibold">Student</li>
                 <li>
                   <Link className="text-xl hover:bg-secondary text-center font-semibold">
                     My Selected Courses

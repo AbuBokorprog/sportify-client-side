@@ -9,6 +9,8 @@ import ManageUsers from "../Compound/Admin/ManageUsers/ManageUsers";
 import ManageCourses from "../Compound/Admin/ManageCourses/ManageCourses";
 import ErrorPage from "../Compound/Errorpage/Errorpage";
 import Coursespages from "../Compound/Courses/Coursespage";
+import AddCourse from "../Compound/Instructor/AddCourse/AddCourse";
+import MyCourse from "../Compound/Instructor/MyCourse/MyCourse";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +48,14 @@ const router = createBrowserRouter([
       {
         path: "manageCourses",
         element: <ManageCourses></ManageCourses>,
+      },
+      {
+        path: "AddCourse",
+        element: <AddCourse></AddCourse>,
+      },
+      {
+        path: "MyCourse",
+        element: <MyCourse></MyCourse>,
       },
     ],
   },
