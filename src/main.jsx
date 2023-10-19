@@ -7,7 +7,7 @@ import AuthProvider from "./providers/AuthProvider";
 import axios from "axios";
 
 // Globally used baseURL with JWT
-axios.defaults.baseURL = "http://localhost:3000";
+axios.defaults.baseURL = "https://sportify-backend-side.vercel.app";
 
 let token = localStorage.getItem("token") || "";
 token = token && `Bearer ${token}`;
