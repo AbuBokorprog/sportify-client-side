@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Course from "./Course";
 import CourseCard from "./Coursecard";
 
 const TopCourses = () => {
@@ -14,11 +13,11 @@ const TopCourses = () => {
 
   return (
     <div className="my-20">
-      <div className="text-center mb-5">
+      <div className="flex justify-center items-center flex-col mb-5">
         <h2 className="text-2xl lg:text-5xl font-semibold my-3">
           Explore Our Top Courses
         </h2>
-        <p className="mx-4 lg:mx-16 text-sm">
+        <p className="w-2/3 lg:mx-16 text-center text-sm mx-auto">
           Discover a world of opportunity through our premier sports courses.
           Tailored for all levels and ages, our top programs encompass a range
           of sports, from tennis to soccer, designed to unlock your potential.
