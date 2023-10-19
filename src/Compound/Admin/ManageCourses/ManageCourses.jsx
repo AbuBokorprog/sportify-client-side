@@ -1,5 +1,3 @@
-import React from "react";
-
 const ManageCourses = () => {
   return (
     <div className="w-full h-full mx-auto ">

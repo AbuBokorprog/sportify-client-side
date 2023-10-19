@@ -1,13 +1,14 @@
-import React, { useContext, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../providers/AuthProvider";
+import React, {useContext, useState} from "react";
+import {Link, useLocation, useNavigate} from "react-router-dom";
+import {AuthContext} from "../../providers/AuthProvider";
 import useSetTitle from "../../hooks/useSetTitle";
-import { FaGoogle } from "react-icons/fa";
-import { GoogleAuthProvider } from "firebase/auth";
+import {FaGoogle} from "react-icons/fa";
+import {GoogleAuthProvider} from "firebase/auth";
 import axios from "axios";
+import swal from "sweetalert";
 
 function Login() {
-  const { signIn, loginWithGoogle, logout } = useContext(AuthContext);
+  const {signIn, loginWithGoogle, logout} = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
@@ -25,14 +26,14 @@ function Login() {
     setError("");
     signIn(email, password)
       .then((result) => {
-        const { displayName, email } = result.user;
+        const {displayName, email} = result.user;
 
         axios
-          .post("/auth/login", { name: displayName, email })
-          .then(({ data }) => {
+          .post("/auth/login", {name: displayName, email})
+          .then(({data}) => {
             localStorage.setItem("token", data.token);
             swal(data.message, "success");
-            navigate(from, { replace: true });
+            navigate(from, {replace: true});
           })
           .catch((err) => {
             console.log(err);
@@ -56,7 +57,7 @@ function Login() {
         const loggedInUser = result.user;
         console.log(loggedInUser);
         setError("");
-        navigate(from || "/", { replace: true });
+        navigate(from || "/", {replace: true});
       })
       .catch((err) => {
         console.log(err);
@@ -69,16 +70,14 @@ function Login() {
       <div className="w-full max-w-md">
         <form
           onSubmit={handleLogin}
-          className="bg-white shadow-lg rounded px-8 pt-6 pb-8 mb-4"
-        >
+          className="bg-white shadow-lg rounded px-8 pt-6 pb-8 mb-4">
           <h3 className="text-center text-cyan-700 font-bold mb-2 text-3xl">
             Welcome Back!
           </h3>
           <div className="mb-4">
             <label
               className="block text-gray-700 font-bold mb-2"
-              htmlFor="email"
-            >
+              htmlFor="email">
               Email
             </label>
             <input
@@ -92,8 +91,7 @@ function Login() {
           <div className="mb-6">
             <label
               className="block text-gray-700 font-bold mb-2"
-              htmlFor="password"
-            >
+              htmlFor="password">
               Password
             </label>
             <input
@@ -114,8 +112,7 @@ function Login() {
               Are you new to Sportify?{" "}
               <Link
                 to="/register"
-                className="inline-block align-baseline font-bold text-sm text-cyan-700 hover:text-info"
-              >
+                className="inline-block align-baseline font-bold text-sm text-cyan-700 hover:text-info">
                 Register
               </Link>
             </p>
@@ -133,8 +130,7 @@ function Login() {
           <button
             disabled
             onClick={loginWithGoogleHandler}
-            className="hover:bg-info bg-cyan-700 text-white hover:text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2 flex justify-center items-center"
-          >
+            className="hover:bg-info bg-cyan-700 text-white hover:text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2 flex justify-center items-center">
             <FaGoogle className="me-2" /> Login with Google
           </button>
         </div>

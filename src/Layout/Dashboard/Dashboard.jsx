@@ -1,8 +1,9 @@
-import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import React, {useContext} from "react";
+import {Link, Outlet} from "react-router-dom";
+import {AuthContext} from "../../providers/AuthProvider";
 
 const Dashboard = () => {
-  const user = "admin";
+  const {user} = useContext(AuthContext);
 
   return (
     <div>
@@ -12,8 +13,7 @@ const Dashboard = () => {
           <Outlet></Outlet>
           <label
             htmlFor="my-drawer-2"
-            className="btn btn-primary drawer-button lg:hidden"
-          >
+            className="btn btn-primary drawer-button lg:hidden">
             Open drawer
           </label>
         </div>
@@ -21,32 +21,29 @@ const Dashboard = () => {
           <label
             htmlFor="my-drawer-2"
             aria-label="close sidebar"
-            className="drawer-overlay"
-          ></label>
+            className="drawer-overlay"></label>
           <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
             <li className="text-4xl text-center font-bold">Sportify</li>
             <hr className="border-black my-2" />
-            {user == "admin" ? (
+            {user?.role == "ADMIN" ? (
               <>
                 <li className="text-xl  text-center font-semibold">ADMIN</li>
                 <li>
                   <Link
                     to="manageUsers"
-                    className="text-xl hover:bg-secondary text-center font-semibold"
-                  >
+                    className="text-xl hover:bg-secondary text-center font-semibold">
                     Manage Users
                   </Link>
                 </li>
                 <li>
                   <Link
                     to="manageCourses"
-                    className="text-xl hover:bg-secondary text-center font-semibold"
-                  >
+                    className="text-xl hover:bg-secondary text-center font-semibold">
                     Manage Courses
                   </Link>
                 </li>
               </>
-            ) : user == "instructor" ? (
+            ) : user?.role == "INSTRUCTOR" ? (
               <>
                 <li className="text-xl  text-center font-semibold">
                   Instructor
@@ -54,16 +51,14 @@ const Dashboard = () => {
                 <li>
                   <Link
                     to="AddCourse"
-                    className="text-xl hover:bg-secondary text-center font-semibold"
-                  >
+                    className="text-xl hover:bg-secondary text-center font-semibold">
                     Add Courses
                   </Link>
                 </li>
                 <li>
                   <Link
                     to="MyCourse"
-                    className="text-xl hover:bg-secondary text-center font-semibold"
-                  >
+                    className="text-xl hover:bg-secondary text-center font-semibold">
                     My Courses
                   </Link>
                 </li>
@@ -74,16 +69,14 @@ const Dashboard = () => {
                 <li>
                   <Link
                     to="mySelectedCourses"
-                    className="text-xl hover:bg-secondary text-center font-semibold"
-                  >
+                    className="text-xl hover:bg-secondary text-center font-semibold">
                     My Selected Courses
                   </Link>
                 </li>
                 <li>
                   <Link
                     to="myEnrolledCourse"
-                    className="text-xl hover:bg-secondary text-center font-semibold"
-                  >
+                    className="text-xl hover:bg-secondary text-center font-semibold">
                     My Enrolled Courses
                   </Link>
                 </li>
@@ -99,8 +92,7 @@ const Dashboard = () => {
             <li>
               <Link
                 to="/"
-                className="text-xl hover:bg-secondary text-center font-semibold"
-              >
+                className="text-xl hover:bg-secondary text-center font-semibold">
                 Home
               </Link>
             </li>

@@ -1,26 +1,26 @@
-import React from "react";
+import axios from "axios";
+import swal from "sweetalert";
 
 const AddCourse = () => {
   const courseHandler = (e) => {
     e.preventDefault();
     const form = e.target;
-    const courseName = form.course;
-    const instructorName = form.instructorName;
-    const instructorEmail = form.instructorEmail;
-    const price = form.price;
-    const availableSeat = form.Seat;
-    const image = form.course;
-    const description = form.description;
-    const courseDetails = {
-      courseName,
-      instructorName,
-      instructorEmail,
-      price,
-      availableSeat,
-      image,
-      description,
+    const course = {
+      thumbnail: form.photoURL.value,
+      title: form.title.value,
+      description: form.description.value,
+      availableSeat: form.seat.value,
+      price: form.price.value,
     };
-    console.log(courseDetails);
+    axios
+      .post("/instructor/course", course)
+      .then(({data}) => {
+        swal(data.message, "success");
+        form.reset();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   return (
     <div className="w-full h-full">
@@ -33,44 +33,33 @@ const AddCourse = () => {
       <div className="mx-20 mt-5">
         <form onSubmit={courseHandler}>
           <div className="form-control my-1">
-            <label htmlFor="course">Course Name:*</label>
+            <label htmlFor="title">Course Name:*</label>
             <input
               type="text"
-              name="course"
-              id="course"
+              name="title"
+              id="title"
               placeholder="Type Your course name"
+              className="input input-bordered border-2 border-secondary"
+              required
+            />
+          </div>
+          <div className="form-control my-1">
+            <label htmlFor="photoURL">Photo URL:*</label>
+            <input
+              type="url"
+              name="photoURL"
+              placeholder="Paste your Photo URL"
+              id="photoURL"
               className="input input-bordered border-2 border-secondary"
               required
             />
           </div>
           <div className="grid grid-cols-2 my-1 gap-4 items-center ">
             <div className="form-control">
-              <label htmlFor="instructorName">Instructor Name:*</label>
-              <input
-                type="text"
-                name="instructorName"
-                id="instructorName"
-                className="input input-bordered border-2 border-secondary"
-                required
-              />
-            </div>
-            <div className="form-control">
-              <label htmlFor="instructorEmail">Instructor Email:*</label>
-              <input
-                type="email"
-                name="instructorEmail"
-                id="instructorEmail"
-                className="input input-bordered border-2 border-secondary"
-                required
-              />
-            </div>
-          </div>
-          <div className="grid grid-cols-2 my-1 gap-4 items-center ">
-            <div className="form-control">
               <label htmlFor="Price">Price:*</label>
               <input
                 type="text"
-                name="Price"
+                name="price"
                 placeholder="Type your course price"
                 id="Price"
                 className="input input-bordered border-2 border-secondary"
@@ -81,32 +70,20 @@ const AddCourse = () => {
               <label htmlFor="Seat">Available Seat:*</label>
               <input
                 type="text"
-                name="Seat"
+                name="seat"
                 placeholder="Type your course available seat"
-                id="Seat"
+                id="seat"
                 className="input input-bordered border-2 border-secondary"
                 required
               />
             </div>
           </div>
           <div className="form-control my-1">
-            <label htmlFor="url">Photo URL:*</label>
-            <input
-              type="url"
-              name="url"
-              placeholder="Paste your Photo URL"
-              id="url"
-              className="input input-bordered border-2 border-secondary"
-              required
-            />
-          </div>
-          <div className="form-control my-1">
             <label htmlFor="description">Description:</label>
             <textarea
               name="description"
               className="textarea textarea-bordered border-2 border-secondary"
-              placeholder="Description"
-            ></textarea>
+              placeholder="Description"></textarea>
           </div>
           <div className="text-center my-1">
             <input
