@@ -129,7 +129,6 @@ const Navbar = () => {
               onClick={handleLogout}
               className="btn btn-ghost btn-md hover:bg-info bg-cyan-700 text-white hover:text-white font-bold"
             >
-              {" "}
               <FaSignOutAlt className="me-1"></FaSignOutAlt> Logout
             </button>
           ) : (
