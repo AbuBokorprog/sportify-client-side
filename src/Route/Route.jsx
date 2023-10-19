@@ -12,6 +12,8 @@ import Coursespages from "../Compound/Courses/Coursespage";
 import AddCourse from "../Compound/Instructor/AddCourse/AddCourse";
 import MyCourse from "../Compound/Instructor/MyCourse/MyCourse";
 import UpdateCourse from "../Compound/Instructor/UpdateCourse/UpdateCourse";
+import MyEnrolledCourses from "../Compound/Student/MyEnrolledCourses";
+import MySelectedCourse from "../Compound/Student/MySelectedCourse";
 
 const router = createBrowserRouter([
   {
@@ -61,6 +63,14 @@ const router = createBrowserRouter([
       {
         path: "updateCourse",
         element: <UpdateCourse></UpdateCourse>,
+      },
+      {
+        path: "mySelectedCourses",
+        element: <MySelectedCourse></MySelectedCourse>,
+      },
+      {
+        path: "myEnrolledCourses",
+        element: <MyEnrolledCourses></MyEnrolledCourses>,
       },
     ],
   },
