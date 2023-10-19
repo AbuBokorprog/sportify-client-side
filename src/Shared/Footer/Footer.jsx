@@ -4,7 +4,7 @@ import { MapPinIcon, PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 
 const Footer = () => {
   return (
-    <div className="img mb-5">
+    <div className="img">
       <footer className="footer items-center p-10 text-white">
         <nav>
           <div className="flex justify-center items-center gap-4">
