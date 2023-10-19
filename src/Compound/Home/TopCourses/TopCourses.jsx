@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Course from "./Course";
+import CourseCard from "./Coursecard";
 
 const TopCourses = () => {
   const [topCourses, setTopCourses] = useState([]);
@@ -24,10 +25,12 @@ const TopCourses = () => {
           Join us and embark on a journey to excellence in your chosen sport."
         </p>
       </div>
-      <div className="grid lg:grid-cols-3 gap-5 mx-auto">
-        {topCourses.map((C) => (
-          <Course key={C.id} course={C}></Course>
-        ))}
+      <div className="flex flex-col justify-center items-center">
+        <div className="grid lg:grid-cols-3 gap-5 mx-auto">
+          {topCourses.map((C) => (
+            <CourseCard key={C.id} course={C}></CourseCard>
+          ))}
+        </div>
       </div>
     </div>
   );

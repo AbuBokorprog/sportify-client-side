@@ -7,12 +7,13 @@ import PrivateRoutes from "./PrivateRoutes";
 import Dashboard from "../Layout/Dashboard/Dashboard";
 import ManageUsers from "../Compound/Admin/ManageUsers/ManageUsers";
 import ManageCourses from "../Compound/Admin/ManageCourses/ManageCourses";
+import ErrorPage from "../Compound/Errorpage/Errorpage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
-    errorElement: <div>Error page</div>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
