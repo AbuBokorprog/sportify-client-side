@@ -1,13 +1,13 @@
 import axios from "axios";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import MyCourseTable from "./MyCourseTable";
 
 const MyCourse = () => {
   const [instCourses, setInstCourses] = useState([]);
   useEffect(() => {
     axios
-      .get("/course")
-      .then(({data}) => {
+      .get("/instructor/course")
+      .then(({ data }) => {
         setInstCourses(data);
       })
       .catch((err) => console.log(err));
