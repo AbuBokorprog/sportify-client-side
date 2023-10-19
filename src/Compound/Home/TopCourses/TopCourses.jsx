@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
-import CourseCard from "./Coursecard";
+import axios from "axios";
+import Course from "./Course";
 
 const TopCourses = () => {
   const [topCourses, setTopCourses] = useState([]);
   useEffect(() => {
-    fetch("/TopCourses.json")
-      .then((res) => res.json())
-      .then((data) => {
+    axios
+      .get("/course")
+      .then(({ data }) => {
         setTopCourses(data);
-      });
+      })
+      .catch((err) => console.log(err));
   }, []);
-
+  const top = topCourses.filter((t) => t.availableSeat < 100);
   return (
     <div className="my-20">
       <div className="flex justify-center items-center flex-col mb-5">
@@ -26,8 +28,8 @@ const TopCourses = () => {
       </div>
       <div className="flex flex-col justify-center items-center">
         <div className="grid lg:grid-cols-3 gap-5 mx-auto">
-          {topCourses.map((C) => (
-            <CourseCard key={C.id} course={C}></CourseCard>
+          {top.slice(0, 5).map((C) => (
+            <Course key={C.id} course={C}></Course>
           ))}
         </div>
       </div>

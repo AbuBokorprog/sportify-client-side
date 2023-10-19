@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import CourseCard from "../Home/TopCourses/Coursecard";
+import CourseCard from "./Coursecard";
 import axios from "axios";
 
 const Coursespages = () => {
