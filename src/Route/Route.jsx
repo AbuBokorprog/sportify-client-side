@@ -8,6 +8,7 @@ import Dashboard from "../Layout/Dashboard/Dashboard";
 import ManageUsers from "../Compound/Admin/ManageUsers/ManageUsers";
 import ManageCourses from "../Compound/Admin/ManageCourses/ManageCourses";
 import ErrorPage from "../Compound/Errorpage/Errorpage";
+import Coursespages from "../Compound/Courses/Coursespage";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/classes",
+        element: <Coursespages />,
       },
       {
         path: "/login",
