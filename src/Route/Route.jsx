@@ -73,7 +73,7 @@ const router = createBrowserRouter([
         element: <MySelectedCourse></MySelectedCourse>,
       },
       {
-        path: "myEnrolledCourses",
+        path: "myEnrolledCourse",
         element: <MyEnrolledCourses></MyEnrolledCourses>,
       },
     ],

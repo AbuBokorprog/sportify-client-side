@@ -2,9 +2,6 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
-
-  
-
   const user = "admin";
 
   return (

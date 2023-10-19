@@ -1,13 +1,18 @@
 import React from "react";
 
 const Users = (props) => {
+  console.log(props.user);
+  const { email, gender, name, role, photoURL, _id } = props.user;
   return (
     <>
       <tr>
         <th>1</th>
-        <td>Cy Ganderton</td>
-        <td>Quality Control Specialist</td>
-        <td>Blue</td>
+        <td>
+          <img className="w-14 rounded-full" src={photoURL} alt="" />
+        </td>
+        <td>{name}</td>
+        <td>{email}</td>
+        <td>{role}</td>
       </tr>
     </>
   );
