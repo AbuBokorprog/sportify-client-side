@@ -1,4 +1,3 @@
-
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -6,13 +5,15 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB9FFkabmXZnzSIwYda6DSjwTOU2WQvdp4",
-  authDomain: "sportify-3-3391c.firebaseapp.com",
-  projectId: "sportify-3-3391c",
-  storageBucket: "sportify-3-3391c.appspot.com",
-  messagingSenderId: "58957618894",
-  appId: "1:58957618894:web:39323f66469e1c8f023a9f"
+  apiKey: "AIzaSyAb2wjk_P0EqdB89wR9xFsfVy6hs29cmkg",
+  authDomain: "sportify-dd910.firebaseapp.com",
+  projectId: "sportify-dd910",
+  storageBucket: "sportify-dd910.appspot.com",
+  messagingSenderId: "728474810393",
+  appId: "1:728474810393:web:f80e0221d2f2b27efd5288",
 };
 
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+
+export default app;
