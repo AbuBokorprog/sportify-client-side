@@ -37,7 +37,7 @@ const Dashboard = () => {
                 </li>
                 <li>
                   <Link
-                    to="/manageCourses"
+                    to="manageCourses"
                     className="text-xl hover:bg-secondary text-center font-semibold"
                   >
                     Manage Courses
@@ -79,7 +79,10 @@ const Dashboard = () => {
             <hr className="border-black my-2" />
 
             <li>
-              <Link className="text-xl hover:bg-secondary text-center font-semibold">
+              <Link
+                to="/"
+                className="text-xl hover:bg-secondary text-center font-semibold"
+              >
                 Home
               </Link>
             </li>
