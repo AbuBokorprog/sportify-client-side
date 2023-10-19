@@ -15,9 +15,9 @@ const Coursespages = () => {
   // console.log(topCourses);
   return (
     <div className="my-20">
-      <p className="text-3xl text-left ms-10 mb-2 font-bold ">All Course :</p>
+      <p className="text-3xl text-center font-bold my-4 ">All Course</p>
       <div className="flex flex-col justify-center items-center">
-        <div className="grid lg:grid-cols-3 gap-5 mx-auto">
+        <div className="grid lg:grid-cols-3 gap-4 mx-auto">
           {topCourses.map((C) => (
             <CourseCard key={C._id} course={C}></CourseCard>
           ))}
