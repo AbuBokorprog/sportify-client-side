@@ -26,12 +26,10 @@ const TopCourses = () => {
           Join us and embark on a journey to excellence in your chosen sport."
         </p>
       </div>
-      <div className="flex flex-col justify-center items-center">
-        <div className="grid lg:grid-cols-3 gap-5 mx-auto">
-          {top.slice(0, 5).map((C) => (
-            <Course key={C.id} course={C}></Course>
-          ))}
-        </div>
+      <div className="grid md:grid-cols-1 lg:grid-cols-4 gap-5 mx-auto">
+        {top.slice(0, 5).map((C) => (
+          <Course key={C.id} course={C}></Course>
+        ))}
       </div>
     </div>
   );

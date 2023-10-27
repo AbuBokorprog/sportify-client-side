@@ -3,9 +3,10 @@ import React from "react";
 const Course = (props) => {
   // console.log(props.course);
   const { title, thumbnail, description, availableSeat, price } = props.course;
+  console.log(props.Course);
   return (
     <div>
-      <div className="card w-96 mx-auto h-60 bg-base-100 shadow-xl image-full">
+      <div className="card w-80 h-80 mx-auto bg-base-100 shadow-xl">
         <figure>
           <img src={thumbnail} alt={title} />
         </figure>

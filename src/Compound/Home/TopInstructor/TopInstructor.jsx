@@ -25,7 +25,7 @@ const TopInstructor = () => {
           toward your full potential and sporting success.
         </p>
       </div>
-      <div className="grid lg:grid-cols-3 gap-5 mx-auto">
+      <div className="grid md:grid-cols-1 lg:grid-cols-4 gap-5 mx-auto">
         {topInstructor.map((Ins) => (
           <Instructor key={Ins.id} instructor={Ins}></Instructor>
         ))}
