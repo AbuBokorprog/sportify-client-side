@@ -8,7 +8,7 @@ const Gallery = () => {
           The Gallery Academy
         </h2>
       </div>
-      <div className="grid lg:grid-cols-4 mx-auto gap-4 px-4">
+      <div className="grid md:grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4 gap-5 mx-auto">
         <img
           className="h-60 rounded-xl"
           src="https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGNyaWNrZXR8ZW58MHx8MHx8fDA%3D&w=600"

@@ -26,7 +26,7 @@ const TopCourses = () => {
           Join us and embark on a journey to excellence in your chosen sport."
         </p>
       </div>
-      <div className="grid md:grid-cols-1 lg:grid-cols-4 gap-5 mx-auto">
+      <div className="grid md:grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4 gap-5 mx-auto">
         {top.slice(0, 5).map((C) => (
           <Course key={C.id} course={C}></Course>
         ))}

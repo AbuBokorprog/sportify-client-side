@@ -15,7 +15,7 @@ const Facilities = () => {
           range of facilities that
         </p>
       </div>
-      <div className="grid lg:grid-cols-4 gap-2 mx-auto px-4">
+      <div className="grid md:grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4 gap-5 mx-auto">
         <div className="">
           <img
             className="h-52 w-screen rounded-xl"
